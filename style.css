@@ -18,6 +18,11 @@ body {
     justify-content: center;
 }
 
+article {
+    margin: 10px;
+    border-radius: var(--radius);
+}
+
 .kedvencek {
     background-color: color-mix(in srgb, var(--hover), transparent 20%);
 }

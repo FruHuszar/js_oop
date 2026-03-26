@@ -1,26 +1,26 @@
 export const KUTYALISTA = [
     {
-        kep: "kepek/kep",
+        kep: "../kepek/kep",
         nev: "Zengi"
     },
     {
-        kep: "kepek/kep2",
+        kep: "../kepek/kep2",
         nev: "Bodri",
         kedvenc: false
     },
     {
-        kep: "kepek/kep2",
-        nev: "Bodri2",
+        kep: "../kepek/kep3",
+        nev: "István",
         kedvenc: false
     },
     {
-        kep: "kepek/kep2",
-        nev: "Bodri3",
+        kep: "../kepek/kep4",
+        nev: "Sok kutyi",
         kedvenc: false
     },
     {
-        kep: "kepek/kep2",
-        nev: "Bodri4",
+        kep: "../kepek/kep5",
+        nev: "Vau",
         kedvenc: false
     }
 ]

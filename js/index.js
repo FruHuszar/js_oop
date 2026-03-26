@@ -1,6 +1,6 @@
-import { KUTYALISTA } from "./adat.js"
+import { KUTYALISTA } from "./adat.js";
+import Kutyak from "./Kutyak.js";
 import Kutya from "./KUTYA.js";
-import { Kutyak } from "./Kutyak.js";
 
 
 const szuloELem = document.querySelector(".tarolo")

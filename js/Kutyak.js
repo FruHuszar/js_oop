@@ -2,7 +2,7 @@
 
 import Kutya from "./KUTYA.js";
 
-export class Kutyak {
+export default class Kutyak {
     #lista=[];
     constructor(lista, szuloElem){
         this.#lista = lista;
