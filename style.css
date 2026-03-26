@@ -23,6 +23,10 @@ article {
     border-radius: var(--radius);
 }
 
+.tarolo {
+    background-color: color-mix(in srgb, var(--betu), transparent 95%);
+}
+
 .kedvencek {
     background-color: color-mix(in srgb, var(--hover), transparent 20%);
 }
