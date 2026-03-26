@@ -1,3 +1,5 @@
+//A this egy osztályon belüli saját objektum példányt jelenti. Eseménykezelések esetén ha function névtelen függvényt használunk, akkor az eseményt kiváltó html dom elemre mutat (mint event target); nyílfüggvény esetén pedig ténylegesen az osztályból képzett aktuális objektumra. function(event){} vs (event)=>{}
+
 export default class Kutya {
     #obj = {};
     constructor(obj = { kep, nev }, szuloELem) {
@@ -6,8 +8,11 @@ export default class Kutya {
         this.megjelenit();
 
         const gombElem = document.querySelector(".kartya:last-child button");
-        gombElem.addEventListener("click", function (event) {
-            console.log(event.target);
+        gombElem.addEventListener("click", (event)=> {
+            console.log("event.target", event.target);
+            console.log("this", this)
+            this.#obj.kedvenc=true;
+            this.sajatEsemeny()
         })
     }
 
@@ -15,7 +20,10 @@ export default class Kutya {
         let html = `
             <div class="kartya">
                 <img src="${this.#obj.kep}.jpg" alt="${this.#obj.nev}">
-                <p>${this.#obj.nev}</p>
+                <p>
+                    ${this.#obj.nev}
+                    <span>${this.#obj.kedvenc?"❤️‍🔥":"❤️‍🩹"}</span>
+                </p>
                 <button><span class="material-symbols-outlined">
                 heart_plus
                 </span></button>
@@ -34,4 +42,15 @@ export default class Kutya {
             this.#obj.oltott = false;
         } else { console.log("nem megfelelő érték") }
     }
+
+
+    //-----------Második óra-------------
+
+    /* CustomEvent, gyakran fogjuk használni */
+    sajatEsemeny(){
+        console.log("sajátesemény")
+        const e = new CustomEvent("kedvencekhez",{detail:this.#obj})
+        window.dispatchEvent(e)
+    }
+
 }
