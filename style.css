@@ -18,6 +18,10 @@ body {
     justify-content: center;
 }
 
+.kedvencek {
+    background-color: color-mix(in srgb, var(--hover), transparent 20%);
+}
+
 img {
     width: 100%;
     border-radius: var(--radius);
