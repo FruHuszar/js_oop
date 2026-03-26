@@ -12,6 +12,7 @@ const bodri = {
 }
 
 const szuloELem = document.querySelector(".tarolo")
+const kedvencELem = document.querySelector(".kedvencek")
 
 const puppy = new Kutya(kutya, szuloELem);
 //console.log(puppy);
@@ -37,4 +38,6 @@ const KEDVENCLISTA=[]
 window.addEventListener("kedvencekhez",(event)=>{
     console.log(event.detail);
     KEDVENCLISTA.push(event.detail);
+    let aktualisIndex = KEDVENCLISTA.length-1
+    const k1 = new Kutya(KEDVENCLISTA[aktualisIndex], kedvencELem);
 })
